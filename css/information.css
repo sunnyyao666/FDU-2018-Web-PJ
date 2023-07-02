@@ -1,0 +1,93 @@
+#user {
+    position: absolute;
+    background-color: #84ffff;
+    left: 50px;
+    top: 270px;
+    padding: 20px;
+    height: 200px;
+    border: 1px solid #eeeeee;
+}
+
+#user table td {
+    height: 40px;
+    width: 170px;
+    font-size: 20px;
+}
+
+#user button {
+    position: absolute;
+    margin: 10px 200px;
+    padding: 5px 20px;
+    background-color: #3385ff;
+    border: 1px outset #eeeeee;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 80px;
+}
+
+#user button:hover {
+    background-color: #317ef3;
+}
+
+#user button:active {
+    background-color: #3075dc;
+    border: 1px inset #eeeeee;
+}
+
+#content {
+    position: relative;
+    width: 1150px;
+    margin: 80px 500px 180px;
+}
+
+#content div {
+    position: relative;
+    margin: 10px;
+    width: 1150px;
+    border: 1px solid #eeeeee;
+}
+
+#content div .title {
+    color: #b5b5b5;
+    margin: 10px;
+}
+
+#upload {
+    background-color: floralwhite;
+}
+
+#buy {
+    background-color: #ffd7c8;
+}
+
+#content table {
+    border: 2px double black;
+    font-size: 20px;
+    margin: 20px 50px;
+}
+
+#content table th {
+    text-align: center;
+    padding: 5px;
+    border: 2px double black;
+}
+
+#content table td {
+    padding: 5px 50px 5px 5px;
+    border: 2px double black;
+}
+
+#sold {
+    background-color: #d1ffa0;
+}
+
+.after-sign{
+    display: inline-block;
+}
+
+.before-sign{
+    display: none;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Art store-information</title>
+    <link rel="stylesheet" title="default" href="./css/reset.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" title="default" href="./css/style-all.css">
+    <link rel="stylesheet" title="default" href="./css/information.css">
+</head>
+<body>
+<header>
+    <div id="title">Welcome to Art store</div>
+    <div id="sign" class="before-sign"><span class="fa fa-sign-in"></span> <a href="#sign-in">登录</a>or<a
+            href="#register">注册</a></div>
+    <div id="information"><span class="before-sign"><span class="fa fa-user-o"></span><span> 未登录  </span></span>
+        <div class="after-sign"><span class="fa fa-user-o"></span><a href="./information.html"> sunny </a><span
+                class="fa fa-shopping-cart"></span><span
+                id="goods-number">2</span>
+            <div id="drop"><a href="./cart.html">购物车 </a>
+                <table id="goods-in-cart">
+                    <tr>
+                        <td><img src="./images/097050-st.jpg"></td>
+                        <td>Mona Lisa</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./images/106020-st.jpg"></td>
+                        <td>The Girl with a Pearl Earring</td>
+                    </tr>
+                </table>
+            </div>
+            <span class="fa fa-sign-out"></span><a onclick="change2()" href="#"> 登出 </a></div>
+    </div>
+</header>
+<div id="search">
+    <a href="./index.html">Art store</a>
+    <form action="./search.html">
+        <input type="text" placeholder=" 搜索...">
+        <button type="submit" id="submit" style="display: none"></button>
+        <label for="submit"><span class="fa fa-search fa-2x"></span></label>
+    </form>
+</div>
+<nav>
+    <ul>
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./search.html">搜索</a></li>
+        <li><a href="./detail.html">详情</a></li>
+    </ul>
+</nav>
+
+<div id="sign-in" class="popup">
+    <div id="sign-in-content">
+        <p class="title">登录</p>
+        <form>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-user-o fa-fw"></span></span><input type="text"
+                                                                                                      name="id" id="id1"
+                                                                                                      required
+                                                                                                      placeholder="用户名">
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="password"
+                                                                                                   id="password1"
+                                                                                                   required
+                                                                                                   placeholder="密码">
+            </div>
+            <button type="button" id="signinButton">登录</button>
+            <button type="reset" onclick="location.href='#'">取消</button>
+            <button type="submit" id="btn1" style="display: none" onclick="location.href='#';change1()"></button>
+        </form>
+    </div>
+</div>
+
+<div id="register" class="popup">
+    <div id="register-content">
+        <p class="title">注册</p>
+        <form>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-user-o fa-fw"></span></span><input type="text"
+                                                                                                      name="id" required
+                                                                                                      id="id2"
+                                                                                                      placeholder="用户名">
+                <p id="id2Null"><span class="fa fa-close"></span> 用户名不能为空</p>
+                <p id="id2Wrong"><span class="fa fa-close"></span> 用户名格式不正确<br>格式：至少六位 非纯数字/纯字母</p>
+                <p id="id2Checked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="password"
+                                                                                                   id="password2"
+                                                                                                   required
+                                                                                                   placeholder="密码">
+                <p id="password2Null"><span class="fa fa-close"></span> 密码不能为空</p>
+                <p id="password2Wrong"><span class="fa fa-close"></span> 密码格式不正确<br>格式：至少六位 与用户名不相同</p>
+                <p id="password2Checked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="repassword"
+                                                                                                   id="repassword"
+                                                                                                   required
+                                                                                                   placeholder="确认密码">
+                <p id="repasswordNull"><span class="fa fa-close"></span> 确认密码不能为空</p>
+                <p id="repasswordWrong"><span class="fa fa-close"></span> 确认密码与原密码不同</p>
+                <p id="repasswordChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-envelope-o fa-fw"></span></span><input type="text"
+                                                                                                          name="email"
+                                                                                                          id="email"
+                                                                                                          required
+                                                                                                          placeholder="邮箱">
+                <p id="emailNull"><span class="fa fa-close"></span> 邮箱不能为空</p>
+                <p id="emailWrong"><span class="fa fa-close"></span> 邮箱格式不正确<br>格式：例：xxx123@126.com</p>
+                <p id="emailChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-phone fa-fw"></span></span><input type="text"
+                                                                                                     name="phone"
+                                                                                                     id="phone"
+                                                                                                     required
+                                                                                                     placeholder="手机号码">
+                <p id="phoneNull"><span class="fa fa-close"></span> 手机号不能为空</p>
+                <p id="phoneWrong"><span class="fa fa-close"></span> 手机号格式不正确<br>格式：中国大陆手机号码 11位纯数字</p>
+                <p id="phoneChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <button type="button" id="registerButton">注册</button>
+            <button type="submit" id="btn2" style="display: none" onclick="location.href='#'"></button>
+            <button type="reset" onclick="location.href='#'">取消</button>
+        </form>
+    </div>
+</div>
+
+<div id="user">
+    <table>
+        <tr>
+            <td>用户：</td>
+            <td>sunny</td>
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>手机号：</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>余额：</td>
+            <td>$9999</td>
+        </tr>
+    </table>
+    <button id="recharge">充值</button>
+</div>
+<div id="content">
+    <div id="upload">
+        <p class="title">我上传的艺术品</p>
+        <table>
+            <tr>
+                <th>商品名称</th>
+                <th>作者</th>
+                <th>描述</th>
+            </tr>
+            <tr>
+                <td>selfie</td>
+                <td>TYJ</td>
+                <td>The prettiest girl in the world</td>
+            </tr>
+        </table>
+    </div>
+    <div id="buy">
+        <p class="title">我购买的艺术品</p>
+        <table>
+            <tr>
+                <th>订单编号</th>
+                <th>商品名称</th>
+                <th>订单时间</th>
+                <th>订单金额</th>
+            </tr>
+            <tr>
+                <td>20190127001</td>
+                <td>Bonaparte franchissant le Grand-Saint-Bernard</td>
+                <td>2019.1.27</td>
+                <td>$100.00</td>
+            </tr>
+            <tr>
+                <td>20190127002</td>
+                <td>La Liberté guidant le peuple</td>
+                <td>2019.1.27</td>
+                <td>$100.00</td>
+            </tr>
+        </table>
+    </div>
+    <div id="sold">
+        <p class="title">我卖出的艺术品</p>
+        <table>
+            <tr>
+                <th>订单编号</th>
+                <th>商品名称</th>
+                <th>订单时间</th>
+                <th>订单金额</th>
+            </tr>
+            <tr>
+                <td>20190127001</td>
+                <td>Bonaparte franchissant le Grand-Saint-Bernard</td>
+                <td>2019.1.27</td>
+                <td>$100.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<footer>Produced by 18SS YHT</footer>
+<script src="./js/information.js"></script>
+<script src="./js/js-all.js"></script>
+</body>
+</html>

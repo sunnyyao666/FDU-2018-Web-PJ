@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Art store-index</title>
+    <link rel="stylesheet" title="default" href="./css/reset.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" title="default" href="./css/index.css">
+</head>
+<body>
+<header>
+    <div id="title">Art store</div>
+    <div id="slogan">艺术是一切享受中最迷人的享受。</div>
+    <form action="./search.html">
+        <input type="text" placeholder=" 搜索...">
+        <button type="submit" id="submit" style="display: none"></button>
+        <label for="submit"><span class="fa fa-search fa-2x"></span></label>
+    </form>
+    <nav><span class="now">首页   </span> <a href="./detail.html">商品详情</a> <span class="before-sign"><span class="fa fa-sign-in"></span> <a
+            href="#sign-in">登录</a>or<a href="#register">注册</a></span><div class="after-sign">  <span class="fa fa-user-o"></span> <a href="./information.html">sunny</a>  <span class="fa fa-sign-out"></span> <a onclick="change2()" href="#">登出</a></div></nav>
+</header>
+
+<div id="sign-in" class="popup">
+    <div id="sign-in-content">
+        <p class="title">登录</p>
+        <form>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-user-o fa-fw"></span></span><input type="text"
+                                                                                                      name="id" id="id1"
+                                                                                                      required
+                                                                                                      placeholder="用户名">
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="password"
+                                                                                                   id="password1"
+                                                                                                   required
+                                                                                                   placeholder="密码">
+            </div>
+            <button type="button" id="signinButton">登录</button>
+            <button type="reset" onclick="location.href='#'">取消</button>
+            <button type="button" id="btn1" style="display: none" onclick="location.href='#';change1()"></button>
+        </form>
+    </div>
+</div>
+
+<div id="register" class="popup">
+    <div id="register-content">
+        <p class="title">注册</p>
+        <form>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-user-o fa-fw"></span></span><input type="text"
+                                                                                                      name="id" required
+                                                                                                      id="id2"
+                                                                                                      placeholder="用户名">
+                <p id="id2Null"><span class="fa fa-close"></span> 用户名不能为空</p>
+                <p id="id2Wrong"><span class="fa fa-close"></span> 用户名格式不正确<br>格式：至少六位 非纯数字/纯字母</p>
+                <p id="id2Checked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="password"
+                                                                                                   id="password2"
+                                                                                                   required
+                                                                                                   placeholder="密码">
+                <p id="password2Null"><span class="fa fa-close"></span> 密码不能为空</p>
+                <p id="password2Wrong"><span class="fa fa-close"></span> 密码格式不正确<br>格式：至少六位 与用户名不相同</p>
+                <p id="password2Checked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-key fa-fw"></span></span><input type="password"
+                                                                                                   name="repassword"
+                                                                                                   id="repassword"
+                                                                                                   required
+                                                                                                   placeholder="确认密码">
+                <p id="repasswordNull"><span class="fa fa-close"></span> 确认密码不能为空</p>
+                <p id="repasswordWrong"><span class="fa fa-close"></span> 确认密码与原密码不同</p>
+                <p id="repasswordChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-envelope-o fa-fw"></span></span><input type="text"
+                                                                                                          name="email"
+                                                                                                          id="email"
+                                                                                                          required
+                                                                                                          placeholder="邮箱">
+                <p id="emailNull"><span class="fa fa-close"></span> 邮箱不能为空</p>
+                <p id="emailWrong"><span class="fa fa-close"></span> 邮箱格式不正确<br>格式：例：xxx123@126.com</p>
+                <p id="emailChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <div>
+                <span class="input-group-addon"><span class="fa fa-phone fa-fw"></span></span><input type="text"
+                                                                                                     name="phone"
+                                                                                                     id="phone"
+                                                                                                     required
+                                                                                                     placeholder="手机号码">
+                <p id="phoneNull"><span class="fa fa-close"></span> 手机号不能为空</p>
+                <p id="phoneWrong"><span class="fa fa-close"></span> 手机号格式不正确<br>格式：中国大陆手机号码 11位纯数字</p>
+                <p id="phoneChecked" style="color:green"><span class="fa fa-check"></span></p>
+            </div>
+            <button type="button" id="registerButton">注册</button>
+            <button type="submit" id="btn2" style="display: none" onclick="location.href='#'"></button>
+            <button type="reset" onclick="location.href='#'">取消</button>
+        </form>
+    </div>
+</div>
+
+<div id="banner">
+    <div id="inside">
+        <a href="./detail.html"><img src="./images/007020-l.jpg" class="image"></a><a href="./detail.html"><img
+            src="./images/005050-l.jpg" class="image"></a><a href="./detail.html"><img src="./images/097050-l.jpg"
+                                                                                       class="image"></a>
+    </div>
+    <div class="btn">
+        <ul>
+            <li onclick="changeBanner(1)" class="show button">1</li>
+            <li onclick="changeBanner(2)" class="button">2</li>
+            <li onclick="changeBanner(3)" class="button">3</li>
+        </ul>
+    </div>
+</div>
+<ul id="more">
+    <li>
+        <p class="name">La Liberté guidant le peuple</p>
+        <img src="./images/author/7.jpg">
+        <p class="author">Eugène Delacroix</p>
+        <p>
+            被卢浮宫博物馆收藏。画面展示的夺取七月革命胜利关键时刻的巷战场面，以浪漫主义的手法巧妙地将写意和写实结合起来，运用丰富而炽烈的色彩和明暗对比，充满着动势的构图，奔放的笔触，紧凑的结构，表现了革命者高涨的热情，歌颂了以工人、小资产阶级和知识分子为参加主体的七月革命，该作品成为代表法兰西民族精神的标志。</p>
+    </li>
+    <li>
+        <p class="name">Napoleon Crossing the Alps</p>
+        <img src="./images/author/5.jpg">
+        <p class="author">Jacques-Louis David</p>
+        <p>
+            该作品展现的是第二次反法同盟战争期间，拿破仑率领4万大军，登上险峻的阿尔卑斯山，为争取时间抄近道越过圣伯纳隘道进入意大利的情景。人物被安排在圣伯纳山口积雪的陡坡上，阴沉的天空、奇险的地势加强了作品的英雄主义气势，拿破仑红色的斗篷使画面辉煌激昂。年轻的拿破仑手指向高高的山峰，骑在一匹直立的烈马背上。</p>
+    </li>
+    <li>
+        <p class="name">Mona Lisa</p>
+        <img src="./images/author/97.jpg">
+        <p class="author">Leonardo da Vinci</p>
+        <p>
+            该画作主要表现了女性的典雅和恬静的典型形象，塑造了资本主义上升时期一位城市有产阶级的妇女形象,代表了文艺复兴时期的美学方向,折射出了的女性的深邃与高尚的思想品质，反映了文艺复兴时期人们对于女性美的审美理念和审美追求。</p>
+    </li>
+</ul>
+<footer>Produced by 18SS YHT</footer>
+<script src="./js/index.js"></script>
+<script src="./js/js-all.js"></script>
+</body>
+</html>

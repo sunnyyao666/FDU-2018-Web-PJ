@@ -1,0 +1,132 @@
+#head {
+    position: relative;
+    height: 80px;
+}
+
+#name {
+    position: absolute;
+    margin: 11px 90px;
+    font-family: "Comic Sans MS", serif;
+    font-size: 50px;
+}
+
+#author {
+    position: absolute;
+    margin: 81px 110px;
+    z-index: 4;
+}
+
+#author a {
+    font-style: italic;
+    text-decoration: none;
+}
+
+#author a:hover {
+    color: gold;
+}
+
+#detail {
+    position: relative;
+    height: 700px;
+}
+
+#box {
+    position: relative;
+    margin: 30px 110px;
+}
+
+#small {
+    position: absolute;
+}
+
+#shadow {
+    display: none;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#showDetails{
+    position: absolute;
+    overflow: hidden;
+    border:1px solid #ededed;
+    background-color: white;
+    top:20px;
+    z-index: 7;
+    display: none;
+}
+
+#big {
+    position:absolute;
+}
+
+#description {
+    position: relative;
+    top: 20px;
+    left: 500px;
+    width: 750px;
+}
+
+#price {
+    position: relative;
+    left: 500px;
+    top: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-family: HeiTi;
+    font-weight: bold;
+}
+
+#price span {
+    color: red;
+}
+
+#detail form {
+    position: relative;
+    top: 15px;
+    left: 750px;
+    width: 200px;
+    height: 50px;
+}
+
+#detail form button {
+    background-color: deepskyblue;
+    height: 40px;
+    width: 150px;
+    color: white;
+    font-family: KaiTi;
+    font-size: 15px;
+    border: 0;
+}
+
+#detail form button:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+#detail table {
+    position: relative;
+    left: 500px;
+    top: 30px;
+    border: 1px solid gray;
+}
+
+#detail table th {
+    border-bottom: 1px solid black;
+    height: 40px;
+    background-color: darkgray;
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 20px;
+}
+
+#detail table td {
+    border-bottom: 1px solid black;
+    height: 40px;
+    width: 350px;
+    text-align: left;
+    padding: 20px 0 0 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,117 @@
+#head {
+    position: relative;
+    margin: 31px 90px;
+    font-size: 50px;
+}
+
+#cart {
+    background-color: lightgray;
+    border: 1px solid gray;
+    position: relative;
+    width: 1500px;
+    top: 20px;
+    left: 100px;
+    height: 700px;
+    margin-bottom: 50px;
+}
+
+#cart .goods {
+    position: relative;
+    margin: 20px 50px;
+    height: 200px;
+    width: 1350px;
+    background-color: floralwhite;
+    border: 1px solid gold;
+}
+
+#cart img {
+    float: left;
+    position: relative;
+    margin: 30px 50px;
+}
+
+#cart .name {
+    position: relative;
+    margin: 30px 0 10px;
+    font-size: 35px;
+    font-family: "Comic Sans MS", serif;
+}
+
+#cart .author {
+    position: relative;
+    margin: 20px 0 10px;
+    font-size: 15px;
+    font-family: "Comic Sans MS", serif;
+    font-style: italic;
+
+}
+
+#cart .price {
+    background-color: aqua;
+    display: inline;
+    padding: 5px;
+    border: 0.5px solid gray;
+    position: relative;
+    top: 20px;
+    font-weight: 900;
+    border-radius: 4px;
+}
+
+.goods button {
+    position: relative;
+    margin: 0 100px;
+    padding: 5px 20px;
+    background-color: violet;
+    border: #eeeeee outset 1px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+
+#check {
+    position: absolute;
+    padding: 5px 20px;
+    background-color: #46ee8b;
+    border: #eeeeee outset 1px;
+    font-size: 20px;
+    right: 100px;
+    bottom: 100px;
+    border-radius: 4px;
+}
+
+#check:hover, .goods button:hover{
+    cursor: pointer;
+}
+
+#check:active, .goods button:active {
+    border-style: inset;
+}
+
+#page ul {
+    position: absolute;
+    bottom: 20px;
+    left: 500px;
+}
+
+#page ul li {
+    display: inline-block;
+}
+
+#page ul li a {
+    text-decoration: none;
+    border: 1px solid #f9d52b;
+    padding: 5px 7px;
+    color: floralwhite;
+    font-weight: 900;
+}
+
+#page ul li a:hover, #page ul li a.now {
+    color: red;
+}
+
+.after-sign{
+    display: inline-block;
+}
+
+.before-sign{
+    display: none;
+}
